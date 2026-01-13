@@ -1,0 +1,111 @@
+# Exclude large data files
+*.csv
+*.pkl
+*.h5
+*.hdf5
+*.model
+*.zip
+
+# Exclude data directories
+data/
+figures/
+literature/
+examples/
+
+# Exclude notebooks (large files)
+*.ipynb
+
+# Exclude code files
+*.py
+__pycache__/
+
+# Exclude notebooks directory
+final_notebook/
+
+# Exclude other report directories
+paper/
+prelim_report/
+docs/
+build/
+
+# Exclude LaTeX intermediate files
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+
+# Exclude other PDF versions (keep only Med_Minds_James_Simon_ProjectFinalReport_fall2025.pdf)
+final_report/latex_report/brief.pdf
+final_report/latex_report/fifteen.pdf
+final_report/latex_report/full_reportV1.pdf
+final_report/latex_report/jonathanVersion.pdf
+final_report/latex_report/longVersion.pdf
+# Note: Med_Minds_James_Simon_ProjectFinalReport_fall2025.pdf is included (not excluded)
+final_report/latex_report/latex_report.tex
+final_report/latex_report/latex_report.aux
+final_report/latex_report/latex_report.bbl
+final_report/latex_report/latex_report.blg
+final_report/latex_report/latex_report.log
+final_report/latex_report/latex_report.out
+final_report/latex_report/latex_report_REORGANIZED.tex
+final_report/latex_report/full_report.tex
+final_report/latex_report/full_report.aux
+final_report/latex_report/full_report.bbl
+final_report/latex_report/full_report.blg
+final_report/latex_report/full_report.log
+final_report/latex_report/full_report.out
+
+# Exclude other files in final_report (but keep PDF)
+final_report/*.txt
+final_report/*.md
+final_report/*.png
+final_report/*.csv
+final_report/*.pkl
+final_report/assignment/
+final_report/sections/
+final_report/model_data/
+final_report/feature_selection_results/
+final_report/figures/
+final_report/latex_report/*.bib
+final_report/latex_report/*.md
+final_report/latex_report/*.png
+final_report/latex_report/*.py
+final_report/latex_report/*.txt
+final_report/latex_report/create_feature_comparison_graphs.py
+
+# Exclude root level files we don't need
+Med-Minds-Final-Project-Notebook-Plan.md
+Notebook-Merge-Guide.md
+SETUP_GITHUB.md
+DEPLOY.md
+check_website_files.ps1
+demographic_fairness_analysis.py
+run_fairness_analysis_example.py
+tmp_compute_importance.py
+tmp_compute_importance_improved.py
+fairness_analysis_notebook_cell.txt
+requirements.txt
+texput.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+tmp/
+temp/
+*.tmp
