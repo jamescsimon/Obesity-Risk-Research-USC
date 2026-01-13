@@ -330,20 +330,39 @@
         <section id="code">
             <h2>Code Repository</h2>
             <p>Our complete implementation is available in Jupyter notebooks. The code includes data preprocessing, feature selection, model training, evaluation, and fairness analysis.</p>
-            <div class="card" style="background: var(--bg-tertiary); border-color: var(--accent-primary);">
-                <h3>Code Repository</h3>
-                <p>The complete code implementation, Jupyter notebooks, and data files are available in our research repository.</p>
-                <p style="margin-top: 1rem;"><strong>Main Notebook:</strong> <code>final_notebook/Med_Minds/Med-Minds-Final-Project.ipynb</code></p>
-                <p style="margin-top: 0.5rem; color: var(--text-secondary);">The notebook contains the complete pipeline:</p>
-                <ul style="margin-left: 2rem; margin-top: 0.5rem; color: var(--text-secondary);">
-                    <li>Data loading and preprocessing</li>
-                    <li>Feature selection (302 → 16 features)</li>
-                    <li>Model training and evaluation</li>
-                    <li>Fairness analysis</li>
-                    <li>Visualization generation</li>
-                </ul>
-                <p style="margin-top: 1rem; padding: 1rem; background: rgba(122, 78, 199, 0.1); border-radius: 4px; border-left: 4px solid var(--accent-primary);">
-                    <strong>Note:</strong> Due to repository size limits, the full codebase with data files is stored separately. Please contact the research team for access to the complete implementation.
+            
+            <div class="paper-embed" style="margin-top: 2rem;">
+                <h3 style="margin-top: 0; color: var(--accent-primary);">Main Notebook: Med-Minds-Final-Project.ipynb</h3>
+                <p style="margin-bottom: 1rem; color: var(--text-secondary);">
+                    The notebook contains the complete pipeline: data loading and preprocessing, feature selection (302 → 16 features), model training and evaluation, fairness analysis, and visualization generation.
+                </p>
+                
+                <div style="margin-bottom: 1rem;">
+                    <p><strong>View on GitHub:</strong></p>
+                    <p style="margin-top: 0.5rem;">
+                        <a href="https://github.com/jamescsimon/Obesity-Risk-Research-USC/blob/main/final_notebook/Med_Minds/Med-Minds-Final-Project.ipynb" 
+                           target="_blank" 
+                           style="color: var(--accent-tertiary); text-decoration: none; font-weight: 500;">
+                            Open Med-Minds-Final-Project.ipynb on GitHub →
+                        </a>
+                    </p>
+                    <p style="margin-top: 0.5rem;">
+                        <a href="https://nbviewer.org/github/jamescsimon/Obesity-Risk-Research-USC/blob/main/final_notebook/Med_Minds/Med-Minds-Final-Project.ipynb" 
+                           target="_blank" 
+                           style="color: var(--accent-tertiary); text-decoration: none; font-weight: 500;">
+                            View in NBViewer (alternative viewer) →
+                        </a>
+                    </p>
+                </div>
+                
+                <div style="border: 1px solid var(--border); border-radius: 4px; overflow: hidden; margin-top: 1rem;">
+                    <iframe id="notebook-viewer" 
+                            src="https://nbviewer.org/github/jamescsimon/Obesity-Risk-Research-USC/blob/main/final_notebook/Med_Minds/Med-Minds-Final-Project.ipynb" 
+                            style="width: 100%; height: 800px; border: none; display: block;"></iframe>
+                </div>
+                
+                <p style="margin-top: 1rem; padding: 1rem; background: rgba(122, 78, 199, 0.1); border-radius: 4px; border-left: 4px solid var(--accent-primary); font-size: 0.9rem;">
+                    <strong>Note:</strong> The notebook is embedded above. If the embedded viewer doesn't load, use the GitHub or NBViewer links above. Large data files and model files are excluded from the repository due to size constraints.
                 </p>
             </div>
         </section>
