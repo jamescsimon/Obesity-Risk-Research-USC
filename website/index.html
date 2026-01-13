@@ -296,20 +296,22 @@
     <div class="container">
         <section id="overview">
             <h2>Overview</h2>
-            <p>Welcome to the Med Minds BMI Prediction Research project. This website presents our comprehensive machine learning research on predicting Body Mass Index (BMI) using survey-based data from the Behavioral Risk Factor Surveillance System (BRFSS) 2024 dataset.</p>
             
-            <div class="overview-grid">
-                <div class="card">
-                    <h3>Research Objective</h3>
-                    <p>Develop and evaluate machine learning models for BMI prediction using easily accessible survey features, enabling scalable obesity screening without requiring clinical visits.</p>
+            <div class="paper-embed" style="margin-bottom: 2rem;">
+                <h3 style="margin-top: 0; color: var(--accent-primary);">Uncovering Determinants of Obesity via Feature Importance: Machine Learning Models for Population-Level BMI Prediction</h3>
+                
+                <div style="margin: 1.5rem 0; padding: 1rem; background: var(--bg-tertiary); border-left: 4px solid var(--accent-primary); border-radius: 4px;">
+                    <p style="margin-bottom: 0.5rem;"><strong>Shashank Joshi</strong>, Department of Computer Science, University of Southern California, ssjoshi@usc.edu</p>
+                    <p style="margin-bottom: 0.5rem;"><strong>James Simon</strong>, Department of Computer Science, University of Southern California, jcsimon@usc.edu</p>
+                    <p style="margin-bottom: 0.5rem;"><strong>Phani Yalamanchili</strong>, Department of Computer Science, University of Southern California, phanirat@usc.edu</p>
+                    <p style="margin-bottom: 0;"><strong>Emma Yue</strong>, Department of Computer Science, University of Southern California, emmayue@usc.edu</p>
                 </div>
-                <div class="card">
-                    <h3>Dataset</h3>
-                    <p>We utilize the BRFSS 2024 dataset with 414,633 valid samples, identifying 16 optimal predictors from 302 available variables through systematic feature selection.</p>
-                </div>
-                <div class="card">
-                    <h3>Results</h3>
-                    <p>Our Stacking Ensemble achieves strong performance with R² = 0.8858, MAE = 2.26 BMI points, and 96.3% within-1-category accuracy, demonstrating the feasibility of survey-based obesity prediction at population scales.</p>
+                
+                <div style="margin-top: 2rem;">
+                    <h3 style="margin-bottom: 1rem; color: var(--accent-tertiary);">Abstract</h3>
+                    <p style="text-align: justify; line-height: 1.8;">
+                        Obesity represents a critical global health challenge, yet scalable population-level screening remains limited by barriers to clinical access. This research addresses this gap by uncovering key determinants of obesity through systematic feature importance analysis of survey-based data, enabling machine learning models to predict BMI at population scales without requiring clinical visits. Using the Behavioral Risk Factor Surveillance System (BRFSS) 2024 dataset with 414,633 valid samples, we employ multi-method feature selection to identify 16 optimal predictors from 302 available variables. We evaluate seven machine learning models spanning linear, tree-based, and ensemble approaches on a balanced 100,000-sample dataset. Our Stacking Ensemble achieves strong performance with regression metrics (RMSE: 3.32, MAE: 2.26 BMI points, R²: 0.8858), classification metrics (Accuracy: 0.8879, Precision: 0.8881, Recall: 0.8875, F1: 0.8878, AUC-ROC: 0.9588), and category metrics (Category Accuracy: 0.6505, Within-1-Category: 0.9631). Comprehensive fairness evaluation reveals race/ethnicity as the primary source of disparity (Δ MAE = 0.86 BMI points), followed by income (Δ MAE = 0.79). Gender disparities are moderate (Δ MAE = 0.42), while age disparities are minimal (Δ MAE = 0.12).
+                    </p>
                 </div>
             </div>
         </section>
