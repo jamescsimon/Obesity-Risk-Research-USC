@@ -6,7 +6,7 @@
     <title>BMI Prediction Research - Med Minds</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300;400;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -30,7 +30,7 @@
         }
 
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-family: 'Work Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             background: var(--bg-primary);
             color: var(--text-primary);
             line-height: 1.6;
@@ -39,6 +39,7 @@
             min-height: 100vh;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
+            font-weight: 300;
         }
 
         .backdrop {
@@ -84,7 +85,7 @@
         .navbar h1 {
             font-size: 1.5rem;
             color: var(--accent-tertiary);
-            font-weight: 600;
+            font-weight: 700;
         }
 
         .nav-links {
@@ -96,7 +97,7 @@
         .nav-links a {
             color: var(--text-secondary);
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 300;
             transition: color 0.3s;
             cursor: pointer;
         }
@@ -123,18 +124,21 @@
             color: var(--accent-tertiary);
             border-bottom: 3px solid var(--accent-primary);
             padding-bottom: 0.5rem;
+            font-weight: 600;
         }
 
         h3 {
             font-size: 1.8rem;
             margin: 2rem 0 1rem;
             color: var(--accent-tertiary);
+            font-weight: 400;
         }
 
         p {
             margin-bottom: 1rem;
             color: var(--text-secondary);
             font-size: 1.1rem;
+            font-weight: 300;
         }
 
         .overview-grid {
@@ -161,6 +165,7 @@
         .card h3 {
             color: var(--accent-primary);
             margin-top: 0;
+            font-weight: 600;
         }
 
         .paper-embed {
@@ -211,7 +216,7 @@
             display: block;
             margin-bottom: 0.5rem;
             color: var(--text-primary);
-            font-weight: 500;
+            font-weight: 300;
         }
 
         input, select {
@@ -222,6 +227,7 @@
             border-radius: 4px;
             color: var(--text-primary);
             font-size: 1rem;
+            font-weight: 300;
         }
 
         input:focus, select:focus {
@@ -256,7 +262,7 @@
 
         .bmi-category {
             font-size: 2rem;
-            font-weight: bold;
+            font-weight: 600;
             margin: 1rem 0;
             padding: 1rem;
             border-radius: 4px;
@@ -293,7 +299,7 @@
         .resource-link {
             display: block;
             color: var(--accent-tertiary);
-            font-weight: 600;
+            font-weight: 400;
             font-size: 1.1rem;
             margin-bottom: 0.5rem;
             text-decoration: none;
@@ -340,18 +346,18 @@
             <h2>Overview</h2>
             
             <div class="paper-embed" style="margin-bottom: 2rem;">
-                <h3 style="margin-top: 0; color: var(--accent-primary);">Uncovering Determinants of Obesity via Feature Importance: Machine Learning Models for Population-Level BMI Prediction</h3>
+                <h3 style="margin-top: 0; color: var(--accent-primary); font-weight: 600;">Uncovering Determinants of Obesity via Feature Importance: Machine Learning Models for Population-Level BMI Prediction</h3>
                 
                 <div style="margin: 1.5rem 0; padding: 1rem; background: var(--bg-tertiary); border-left: 4px solid var(--accent-primary); border-radius: 4px;">
-                    <p style="margin-bottom: 0.5rem;"><strong>Shashank Joshi</strong>, Department of Computer Science, University of Southern California, ssjoshi@usc.edu</p>
-                    <p style="margin-bottom: 0.5rem;"><strong>James Simon</strong>, Department of Computer Science, University of Southern California, jcsimon@usc.edu</p>
-                    <p style="margin-bottom: 0.5rem;"><strong>Phani Yalamanchili</strong>, Department of Computer Science, University of Southern California, phanirat@usc.edu</p>
-                    <p style="margin-bottom: 0;"><strong>Emma Yue</strong>, Department of Computer Science, University of Southern California, emmayue@usc.edu</p>
+                    <p style="margin-bottom: 0.5rem; font-weight: 200;"><strong style="font-weight: 400;">Shashank Joshi</strong>, <span style="font-weight: 200;">Department of Computer Science, University of Southern California, ssjoshi@usc.edu</span></p>
+                    <p style="margin-bottom: 0.5rem; font-weight: 200;"><strong style="font-weight: 400;">James Simon</strong>, <span style="font-weight: 200;">Department of Computer Science, University of Southern California, jcsimon@usc.edu</span></p>
+                    <p style="margin-bottom: 0.5rem; font-weight: 200;"><strong style="font-weight: 400;">Phani Yalamanchili</strong>, <span style="font-weight: 200;">Department of Computer Science, University of Southern California, phanirat@usc.edu</span></p>
+                    <p style="margin-bottom: 0; font-weight: 200;"><strong style="font-weight: 400;">Emma Yue</strong>, <span style="font-weight: 200;">Department of Computer Science, University of Southern California, emmayue@usc.edu</span></p>
                 </div>
                 
                 <div style="margin-top: 2rem;">
-                    <h3 style="margin-bottom: 1rem; color: var(--accent-tertiary);">Abstract</h3>
-                    <p style="text-align: justify; line-height: 1.8;">
+                    <h3 style="margin-bottom: 1rem; color: var(--accent-tertiary); font-weight: 400;">Abstract</h3>
+                    <p style="text-align: justify; line-height: 1.8; font-weight: 300;">
                         Obesity represents a critical global health challenge, yet scalable population-level screening remains limited by barriers to clinical access. This research addresses this gap by uncovering key determinants of obesity through systematic feature importance analysis of survey-based data, enabling machine learning models to predict BMI at population scales without requiring clinical visits. Using the Behavioral Risk Factor Surveillance System (BRFSS) 2024 dataset with 414,633 valid samples, we employ multi-method feature selection to identify 16 optimal predictors from 302 available variables. We evaluate seven machine learning models spanning linear, tree-based, and ensemble approaches on a balanced 100,000-sample dataset. Our Stacking Ensemble achieves strong performance with regression metrics (RMSE: 3.32, MAE: 2.26 BMI points, R²: 0.8858), classification metrics (Accuracy: 0.8879, Precision: 0.8881, Recall: 0.8875, F1: 0.8878, AUC-ROC: 0.9588), and category metrics (Category Accuracy: 0.6505, Within-1-Category: 0.9631). Comprehensive fairness evaluation reveals race/ethnicity as the primary source of disparity (Δ MAE = 0.86 BMI points), followed by income (Δ MAE = 0.79). Gender disparities are moderate (Δ MAE = 0.42), while age disparities are minimal (Δ MAE = 0.12).
                     </p>
                 </div>
@@ -374,31 +380,31 @@
             <p>Our complete implementation is available in Jupyter notebooks. The code includes data preprocessing, feature selection, model training, evaluation, and fairness analysis.</p>
             
             <div class="paper-embed" style="margin-top: 2rem;">
-                <h3 style="margin-top: 0; color: var(--accent-primary);">Main Notebook: Med-Minds-Final-Project.ipynb</h3>
-                <p style="margin-bottom: 1rem; color: var(--text-secondary);">
+                <h3 style="margin-top: 0; color: var(--accent-primary); font-weight: 400;">Main Notebook: Med-Minds-Final-Project.ipynb</h3>
+                <p style="margin-bottom: 1rem; color: var(--text-secondary); font-weight: 200;">
                     The notebook contains the complete pipeline: data loading and preprocessing, feature selection (302 to 16 features), model training and evaluation, fairness analysis, and visualization generation.
                 </p>
                 
                 <div style="margin-bottom: 1rem;">
-                    <p><strong>View Options:</strong></p>
-                    <p style="margin-top: 0.5rem;">
+                    <p style="font-weight: 300;"><strong style="font-weight: 400;">View Options:</strong></p>
+                    <p style="margin-top: 0.5rem; font-weight: 200;">
                         <a href="https://github.com/jamescsimon/Obesity-Risk-Research-USC/blob/main/final_notebook/Med_Minds/Med-Minds-Final-Project.ipynb" 
                            target="_blank" 
-                           style="color: var(--accent-tertiary); text-decoration: none; font-weight: 500;">
+                           style="color: var(--accent-tertiary); text-decoration: none; font-weight: 300;">
                             View on GitHub (recommended)
                         </a>
                     </p>
-                    <p style="margin-top: 0.5rem;">
+                    <p style="margin-top: 0.5rem; font-weight: 200;">
                         <a href="https://colab.research.google.com/github/jamescsimon/Obesity-Risk-Research-USC/blob/main/final_notebook/Med_Minds/Med-Minds-Final-Project.ipynb" 
                            target="_blank" 
-                           style="color: var(--accent-tertiary); text-decoration: none; font-weight: 500;">
+                           style="color: var(--accent-tertiary); text-decoration: none; font-weight: 300;">
                             Open in Google Colab
                         </a>
                     </p>
                 </div>
                 
-                <p style="margin-top: 1rem; padding: 1rem; background: rgba(122, 78, 199, 0.1); border-radius: 4px; border-left: 4px solid var(--accent-primary); font-size: 0.9rem;">
-                    <strong>Note:</strong> The notebook can be viewed directly on GitHub, which renders Jupyter notebooks natively. Google Colab allows you to open and run the notebook interactively. Large data files and model files are excluded from the repository due to size constraints.
+                <p style="margin-top: 1rem; padding: 1rem; background: rgba(122, 78, 199, 0.1); border-radius: 4px; border-left: 4px solid var(--accent-primary); font-size: 0.9rem; font-weight: 200;">
+                    <strong style="font-weight: 400;">Note:</strong> The notebook can be viewed directly on GitHub, which renders Jupyter notebooks natively. Google Colab allows you to open and run the notebook interactively. Large data files and model files are excluded from the repository due to size constraints.
                 </p>
             </div>
         </section>
@@ -564,12 +570,12 @@
         function displayResults(predictedBMI, category, inputs) {
             const resultDiv = document.getElementById('result');
             const categoryInfo = BMI_CATEGORIES[category];
-            let html = `<div class="result-card"><h3>Your Predicted BMI Results</h3>
-                <p><strong>Predicted BMI:</strong> ${predictedBMI.toFixed(1)} kg/m²</p>
+            let html = `<div class="result-card"><h3 style="font-weight: 400;">Your Predicted BMI Results</h3>
+                <p style="font-weight: 300;"><strong style="font-weight: 400;">Predicted BMI:</strong> ${predictedBMI.toFixed(1)} kg/m²</p>
                 <div class="bmi-category ${categoryInfo.color}">${category}</div>
-                <div class="comparison-info"><p><strong>Note:</strong> This prediction is based on survey responses and statistical patterns. It should not replace professional medical assessment.</p></div></div>`;
+                <div class="comparison-info"><p style="font-weight: 200;"><strong style="font-weight: 400;">Note:</strong> This prediction is based on survey responses and statistical patterns. It should not replace professional medical assessment.</p></div></div>`;
 
-            html += '<div class="resource-links"><h4>Health Resources:</h4>';
+            html += '<div class="resource-links"><h4 style="font-weight: 400;">Health Resources:</h4>';
             
             let resources = [];
             if (category === 'Underweight') {
@@ -588,12 +594,12 @@
                 resources.forEach(resource => {
                     html += `<div class="resource-item">
                         <a href="${resource.link}" target="_blank" class="resource-link">${resource.title}</a>
-                        <p style="color: var(--text-secondary); font-size: 0.9rem; margin: 0.25rem 0;"><strong>Organization:</strong> ${resource.organization}</p>
-                        <p style="color: var(--text-primary); margin-top: 0.5rem; line-height: 1.5;">${resource.description}</p>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; margin: 0.25rem 0; font-weight: 200;"><strong style="font-weight: 400;">Organization:</strong> ${resource.organization}</p>
+                        <p style="color: var(--text-primary); margin-top: 0.5rem; line-height: 1.5; font-weight: 200;">${resource.description}</p>
                     </div>`;
                 });
             } else {
-                html += '<p style="color: var(--text-secondary);">No specific resources available for this category.</p>';
+                html += '<p style="color: var(--text-secondary); font-weight: 200;">No specific resources available for this category.</p>';
             }
             
             html += '</div>';
