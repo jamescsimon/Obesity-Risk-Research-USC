@@ -14,13 +14,18 @@ examples/
 
 # Exclude notebooks (large files)
 *.ipynb
+# BUT include the main project notebook
+!final_notebook/Med_Minds/Med-Minds-Final-Project.ipynb
 
 # Exclude code files
 *.py
 __pycache__/
 
-# Exclude notebooks directory
-final_notebook/
+# Exclude notebooks directory (but allow the main notebook)
+final_notebook/*
+!final_notebook/Med_Minds/
+final_notebook/Med_Minds/*
+!final_notebook/Med_Minds/Med-Minds-Final-Project.ipynb
 
 # Exclude other report directories
 paper/

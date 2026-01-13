@@ -1,0 +1,32 @@
+For Obese results:
+Link: https://www.nutrition.gov/topics/diet-and-health-conditions/overweight-and-obesity
+Title: Overweight and Obesity
+Organization: U.S. Department of Agriculture
+Description: Manage your weight, choose a safe diet, or calculate your BMI (Body Mass Index). Also find resources for children with weight concerns.
+
+Link: https://odphp.health.gov/healthypeople/objectives-and-data/browse-objectives/overweight-and-obesity/evidence-based-resources
+Title: Overweight and Obesity Evidence-Based Resources
+Organization:  Office of Disease Prevention and Health Promotion
+Description: Learn about proven, science-based methods to improve health and prevent disease. 
+
+For Underweight results age >=25:
+Link: https://my.clevelandclinic.org/health/diseases/underweight
+Title: Underweight
+Organization: Cleveland Clinic
+Description: Having underweight can cause serious health risks or be a sign of a serious underlying condition.
+
+Link: https://www.nutrition.gov/topics/healthy-living-and-weight
+Title: Healthy Living and Weight
+Organization: U.S. Department of Agriculture
+Description: Learn how to maintain a healthy weight, how to lose weight naturally with a healthy diet, and how to establish a positive body image. 
+
+For Underweight results age <25:
+Link: https://www.nutrition.gov/topics/healthy-living-and-weight/weight-management-youth
+Title: Weight Management for Youth
+Organization: U.S. Department of Agriculture
+Description: Understand how to address weight issues in children and teens with healthy guidelines, links to interactive and skill-building tools, and more.
+
+Link: https://my.clevelandclinic.org/health/diseases/underweight
+Title: Underweight
+Organization: Cleveland Clinic
+Description: Having underweight can cause serious health risks or be a sign of a serious underlying condition.

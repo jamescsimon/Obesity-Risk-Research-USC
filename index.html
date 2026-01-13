@@ -32,6 +32,29 @@
             color: var(--text-primary);
             line-height: 1.6;
             overflow-x: hidden;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        .backdrop {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            opacity: 0.05;
+            z-index: -1;
+            pointer-events: none;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+        .backdrop img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+            object-position: bottom center;
         }
 
         .navbar {
@@ -248,19 +271,33 @@
             border-top: 1px solid var(--border);
         }
 
-        .resource-link {
-            display: inline-block;
-            margin: 0.5rem 0.5rem 0.5rem 0;
-            padding: 0.75rem 1.5rem;
-            background: var(--accent-secondary);
-            color: white;
-            text-decoration: none;
+        .resource-item {
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            background: var(--bg-tertiary);
             border-radius: 4px;
-            transition: background 0.3s;
+            border-left: 4px solid var(--accent-primary);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .resource-item:hover {
+            transform: translateX(4px);
+            box-shadow: 0 4px 8px rgba(122, 78, 199, 0.2);
+        }
+
+        .resource-link {
+            display: block;
+            color: var(--accent-tertiary);
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            text-decoration: none;
+            transition: color 0.3s;
         }
 
         .resource-link:hover {
-            background: var(--accent-primary);
+            color: var(--accent-primary);
+            text-decoration: underline;
         }
 
         .comparison-info {
@@ -296,20 +333,22 @@
     <div class="container">
         <section id="overview">
             <h2>Overview</h2>
-            <p>Welcome to the Med Minds BMI Prediction Research project. This website presents our comprehensive machine learning research on predicting Body Mass Index (BMI) using survey-based data from the Behavioral Risk Factor Surveillance System (BRFSS) 2024 dataset.</p>
             
-            <div class="overview-grid">
-                <div class="card">
-                    <h3>Research Objective</h3>
-                    <p>Develop and evaluate machine learning models for BMI prediction using easily accessible survey features, enabling scalable obesity screening without requiring clinical visits.</p>
+            <div class="paper-embed" style="margin-bottom: 2rem;">
+                <h3 style="margin-top: 0; color: var(--accent-primary);">Uncovering Determinants of Obesity via Feature Importance: Machine Learning Models for Population-Level BMI Prediction</h3>
+                
+                <div style="margin: 1.5rem 0; padding: 1rem; background: var(--bg-tertiary); border-left: 4px solid var(--accent-primary); border-radius: 4px;">
+                    <p style="margin-bottom: 0.5rem;"><strong>Shashank Joshi</strong>, Department of Computer Science, University of Southern California, ssjoshi@usc.edu</p>
+                    <p style="margin-bottom: 0.5rem;"><strong>James Simon</strong>, Department of Computer Science, University of Southern California, jcsimon@usc.edu</p>
+                    <p style="margin-bottom: 0.5rem;"><strong>Phani Yalamanchili</strong>, Department of Computer Science, University of Southern California, phanirat@usc.edu</p>
+                    <p style="margin-bottom: 0;"><strong>Emma Yue</strong>, Department of Computer Science, University of Southern California, emmayue@usc.edu</p>
                 </div>
-                <div class="card">
-                    <h3>Dataset</h3>
-                    <p>We utilize the BRFSS 2024 dataset with 414,633 valid samples, identifying 16 optimal predictors from 302 available variables through systematic feature selection.</p>
-                </div>
-                <div class="card">
-                    <h3>Results</h3>
-                    <p>Our Stacking Ensemble achieves strong performance with R² = 0.8858, MAE = 2.26 BMI points, and 96.3% within-1-category accuracy, demonstrating the feasibility of survey-based obesity prediction at population scales.</p>
+                
+                <div style="margin-top: 2rem;">
+                    <h3 style="margin-bottom: 1rem; color: var(--accent-tertiary);">Abstract</h3>
+                    <p style="text-align: justify; line-height: 1.8;">
+                        Obesity represents a critical global health challenge, yet scalable population-level screening remains limited by barriers to clinical access. This research addresses this gap by uncovering key determinants of obesity through systematic feature importance analysis of survey-based data, enabling machine learning models to predict BMI at population scales without requiring clinical visits. Using the Behavioral Risk Factor Surveillance System (BRFSS) 2024 dataset with 414,633 valid samples, we employ multi-method feature selection to identify 16 optimal predictors from 302 available variables. We evaluate seven machine learning models spanning linear, tree-based, and ensemble approaches on a balanced 100,000-sample dataset. Our Stacking Ensemble achieves strong performance with regression metrics (RMSE: 3.32, MAE: 2.26 BMI points, R²: 0.8858), classification metrics (Accuracy: 0.8879, Precision: 0.8881, Recall: 0.8875, F1: 0.8878, AUC-ROC: 0.9588), and category metrics (Category Accuracy: 0.6505, Within-1-Category: 0.9631). Comprehensive fairness evaluation reveals race/ethnicity as the primary source of disparity (Δ MAE = 0.86 BMI points), followed by income (Δ MAE = 0.79). Gender disparities are moderate (Δ MAE = 0.42), while age disparities are minimal (Δ MAE = 0.12).
+                    </p>
                 </div>
             </div>
         </section>
@@ -328,20 +367,39 @@
         <section id="code">
             <h2>Code Repository</h2>
             <p>Our complete implementation is available in Jupyter notebooks. The code includes data preprocessing, feature selection, model training, evaluation, and fairness analysis.</p>
-            <div class="card" style="background: var(--bg-tertiary); border-color: var(--accent-primary);">
-                <h3>Code Repository</h3>
-                <p>The complete code implementation, Jupyter notebooks, and data files are available in our research repository.</p>
-                <p style="margin-top: 1rem;"><strong>Main Notebook:</strong> <code>final_notebook/Med_Minds/Med-Minds-Final-Project.ipynb</code></p>
-                <p style="margin-top: 0.5rem; color: var(--text-secondary);">The notebook contains the complete pipeline:</p>
-                <ul style="margin-left: 2rem; margin-top: 0.5rem; color: var(--text-secondary);">
-                    <li>Data loading and preprocessing</li>
-                    <li>Feature selection (302 → 16 features)</li>
-                    <li>Model training and evaluation</li>
-                    <li>Fairness analysis</li>
-                    <li>Visualization generation</li>
-                </ul>
-                <p style="margin-top: 1rem; padding: 1rem; background: rgba(122, 78, 199, 0.1); border-radius: 4px; border-left: 4px solid var(--accent-primary);">
-                    <strong>Note:</strong> Due to repository size limits, the full codebase with data files is stored separately. Please contact the research team for access to the complete implementation.
+            
+            <div class="paper-embed" style="margin-top: 2rem;">
+                <h3 style="margin-top: 0; color: var(--accent-primary);">Main Notebook: Med-Minds-Final-Project.ipynb</h3>
+                <p style="margin-bottom: 1rem; color: var(--text-secondary);">
+                    The notebook contains the complete pipeline: data loading and preprocessing, feature selection (302 → 16 features), model training and evaluation, fairness analysis, and visualization generation.
+                </p>
+                
+                <div style="margin-bottom: 1rem;">
+                    <p><strong>View on GitHub:</strong></p>
+                    <p style="margin-top: 0.5rem;">
+                        <a href="https://github.com/jamescsimon/Obesity-Risk-Research-USC/blob/main/final_notebook/Med_Minds/Med-Minds-Final-Project.ipynb" 
+                           target="_blank" 
+                           style="color: var(--accent-tertiary); text-decoration: none; font-weight: 500;">
+                            Open Med-Minds-Final-Project.ipynb on GitHub →
+                        </a>
+                    </p>
+                    <p style="margin-top: 0.5rem;">
+                        <a href="https://nbviewer.org/github/jamescsimon/Obesity-Risk-Research-USC/blob/main/final_notebook/Med_Minds/Med-Minds-Final-Project.ipynb" 
+                           target="_blank" 
+                           style="color: var(--accent-tertiary); text-decoration: none; font-weight: 500;">
+                            View in NBViewer (alternative viewer) →
+                        </a>
+                    </p>
+                </div>
+                
+                <div style="border: 1px solid var(--border); border-radius: 4px; overflow: hidden; margin-top: 1rem;">
+                    <iframe id="notebook-viewer" 
+                            src="https://nbviewer.org/github/jamescsimon/Obesity-Risk-Research-USC/blob/main/final_notebook/Med_Minds/Med-Minds-Final-Project.ipynb" 
+                            style="width: 100%; height: 800px; border: none; display: block;"></iframe>
+                </div>
+                
+                <p style="margin-top: 1rem; padding: 1rem; background: rgba(122, 78, 199, 0.1); border-radius: 4px; border-left: 4px solid var(--accent-primary); font-size: 0.9rem;">
+                    <strong>Note:</strong> The notebook is embedded above. If the embedded viewer doesn't load, use the GitHub or NBViewer links above. Large data files and model files are excluded from the repository due to size constraints.
                 </p>
             </div>
         </section>
@@ -459,6 +517,51 @@
             displayResults(predictedBMI, category, inputs);
         }
 
+        const RESOURCES = {
+            'Obese': [
+                {
+                    link: 'https://www.nutrition.gov/topics/diet-and-health-conditions/overweight-and-obesity',
+                    title: 'Overweight and Obesity',
+                    organization: 'U.S. Department of Agriculture',
+                    description: 'Manage your weight, choose a safe diet, or calculate your BMI (Body Mass Index). Also find resources for children with weight concerns.'
+                },
+                {
+                    link: 'https://odphp.health.gov/healthypeople/objectives-and-data/browse-objectives/overweight-and-obesity/evidence-based-resources',
+                    title: 'Overweight and Obesity Evidence-Based Resources',
+                    organization: 'Office of Disease Prevention and Health Promotion',
+                    description: 'Learn about proven, science-based methods to improve health and prevent disease.'
+                }
+            ],
+            'Underweight_25plus': [
+                {
+                    link: 'https://my.clevelandclinic.org/health/diseases/underweight',
+                    title: 'Underweight',
+                    organization: 'Cleveland Clinic',
+                    description: 'Having underweight can cause serious health risks or be a sign of a serious underlying condition.'
+                },
+                {
+                    link: 'https://www.nutrition.gov/topics/healthy-living-and-weight',
+                    title: 'Healthy Living and Weight',
+                    organization: 'U.S. Department of Agriculture',
+                    description: 'Learn how to maintain a healthy weight, how to lose weight naturally with a healthy diet, and how to establish a positive body image.'
+                }
+            ],
+            'Underweight_under25': [
+                {
+                    link: 'https://www.nutrition.gov/topics/healthy-living-and-weight/weight-management-youth',
+                    title: 'Weight Management for Youth',
+                    organization: 'U.S. Department of Agriculture',
+                    description: 'Understand how to address weight issues in children and teens with healthy guidelines, links to interactive and skill-building tools, and more.'
+                },
+                {
+                    link: 'https://my.clevelandclinic.org/health/diseases/underweight',
+                    title: 'Underweight',
+                    organization: 'Cleveland Clinic',
+                    description: 'Having underweight can cause serious health risks or be a sign of a serious underlying condition.'
+                }
+            ]
+        };
+
         function displayResults(predictedBMI, category, inputs) {
             const resultDiv = document.getElementById('result');
             const categoryInfo = BMI_CATEGORIES[category];
@@ -468,15 +571,32 @@
                 <div class="comparison-info"><p><strong>Note:</strong> This prediction is based on survey responses and statistical patterns. It should not replace professional medical assessment.</p></div></div>`;
 
             html += '<div class="resource-links"><h4>Health Resources:</h4>';
+            
+            let resources = [];
             if (category === 'Underweight') {
-                html += `<a href="https://www.cdc.gov/healthyweight/assessing/index.html" target="_blank" class="resource-link">CDC: Healthy Weight</a>
-                    <a href="https://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/expert-answers/underweight/faq-20058429" target="_blank" class="resource-link">Mayo Clinic: Underweight Health</a>`;
-            } else if (category === 'Normal') {
-                html += `<a href="https://www.cdc.gov/healthyweight/index.html" target="_blank" class="resource-link">CDC: Maintaining Healthy Weight</a>`;
-            } else {
-                html += `<a href="https://www.cdc.gov/healthyweight/losing_weight/index.html" target="_blank" class="resource-link">CDC: Losing Weight</a>
-                    <a href="https://www.nhlbi.nih.gov/health/educational/lose_wt/index.htm" target="_blank" class="resource-link">NIH: Aim for a Healthy Weight</a>`;
+                const ageGroup = inputs['_AGEG5YR'] || 7;
+                // Age group 1 = 18-24 years (< 25), 2+ = 25+ years (>= 25)
+                if (ageGroup < 2) {
+                    resources = RESOURCES['Underweight_under25'];
+                } else {
+                    resources = RESOURCES['Underweight_25plus'];
+                }
+            } else if (category === 'Obese Class I' || category === 'Obese Class II' || category === 'Obese Class III') {
+                resources = RESOURCES['Obese'];
             }
+            
+            if (resources.length > 0) {
+                resources.forEach(resource => {
+                    html += `<div class="resource-item">
+                        <a href="${resource.link}" target="_blank" class="resource-link">${resource.title}</a>
+                        <p style="color: var(--text-secondary); font-size: 0.9rem; margin: 0.25rem 0;"><strong>Organization:</strong> ${resource.organization}</p>
+                        <p style="color: var(--text-primary); margin-top: 0.5rem; line-height: 1.5;">${resource.description}</p>
+                    </div>`;
+                });
+            } else {
+                html += '<p style="color: var(--text-secondary);">No specific resources available for this category.</p>';
+            }
+            
             html += '</div>';
 
             resultDiv.innerHTML = html;
@@ -492,5 +612,9 @@
             });
         });
     </script>
+    
+    <div class="backdrop">
+        <img src="../backdrop.png" alt="Decorative backdrop">
+    </div>
 </body>
 </html>
